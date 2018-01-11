@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue18.3</title>
+    <style>
+        .actice {
+            background: #0a76a4;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <a :class="{actice: isActive}" :href="url">click</a>
+    <!--<img v-bind:src="img">-->
+</div>
+<script src="../lib/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

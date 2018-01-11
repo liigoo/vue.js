@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+</head>
+<body>
+
+<div id="app">
+    <div>
+        <label>v-model无修饰符</label>
+        <input v-model="name1"><br />
+        {{name1}}
+        <br />
+    </div>
+    <div>
+        <label>v-model无修饰符&显示空格</label>
+        <input v-model="name2"><br />
+        <pre>{{name2}}</pre>
+        <br />
+    </div>
+    <div>
+        <label>v-model.lazy</label>
+        <input v-model.lazy="name3"><br />
+        {{name3}}
+        <br />
+    </div>
+    <div>
+        <label>v-model.trim</label>
+        <input v-model.trim="name4"><br />
+        {{name4}}
+        <br />
+    </div>
+    <div>
+        <label>v-model.number</label>
+        <input v-model.number="name5"><br />
+        {{name5}}
+        <br />
+    </div>
+
+
+
+
+</div>
+<script src="../lib/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

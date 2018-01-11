@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+</head>
+<body>
+
+<div id="app">
+    <div>
+        <h2>radio</h2>
+        <label>
+            男
+            <input type="radio" value="male" v-model="sex">
+        </label>
+
+        <label>
+            女
+            <input type="radio" value="female" v-model="sex"><br />
+        </label>
+        {{sex}}
+    </div>
+    <div>
+        <h2>checkbox</h2><br />
+        <label>
+            goods A
+            <input type="checkbox" value="goodsA" v-model="like">
+        </label>
+        <label>
+            goods B
+            <input type="checkbox" value="goodsB" v-model="like"><br />
+        </label>
+        {{like}}
+    </div>
+    <div>
+        <h2>select(单选)</h2><br />
+        <select v-model="from">
+            <option value="1">goodsA</option>
+            <option value="2">goodsB</option>
+            <option value="3">goodsC</option>
+        </select><br />
+        {{from}}
+    </div>
+    <div>
+        <h2>select(多选)</h2><br />
+        <select v-model="cometo" multiple>
+            <option value="1">placeA</option>
+            <option value="2">placeB</option>
+            <option value="3">placeC</option>
+            <option value="4">placeD</option>
+            <option value="5">placeE</option>
+        </select><br />
+        {{cometo}}
+    </div>
+
+</div>
+<script src="../lib/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
