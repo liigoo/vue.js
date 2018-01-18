@@ -1,7 +1,7 @@
 Vue.component('balance',{
-    template:'' +
+    template:
     '<div>' +
-    '<show @show-balance="show_balance()"></show>' +
+    '<show @show-balance="show_balance"></show>' +
     '<div v-if="show">number 233</div>' +
     '</div>',
     methods: {
@@ -12,18 +12,17 @@ Vue.component('balance',{
     },
     data: function () {
         return {
-            show:false,
+            show: false,
         }
     }
 
 });
 
-Vue.component('show',{
-    template: '' +
-    '<button @click="on_click()">show number</button>',
+Vue.component('show', {
+    template: '<button @click="on_click()">show number</button>',
     methods:{
         on_click(){
-            this.$emit('show-balance',{a:1,b:2,c:3})
+            this.$emit('show-balance', {a: 1,b: 2,c: 3})
 
         }
     }
@@ -31,4 +30,4 @@ Vue.component('show',{
 
 new Vue({
     el: '#app'
-});
+})

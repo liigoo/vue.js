@@ -7,7 +7,15 @@
 <body>
 
 <div id="app">
-
+    <div>
+        <input v-model="length"><br>
+        {{length | meter('M')}}
+    </div>
+    <hr>
+    <div>
+        <input v-model="price"><br>
+        {{price | currency('EU')}}
+    </div>
 </div>
 <script src="../lib/vue.js"></script>
 <script src="js/main.js"></script>
