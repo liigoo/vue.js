@@ -3,12 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>vue</title>
+    <style>
+        .panel {
+            max-width: 300px;
+            border: 1px solid #999;
+            /*padding: 20px;*/
+            margin: 10px;
+            line-height: 28px;
+        }
+
+        .panel > *{
+            padding: 15px;
+        }
+
+        .panel .title {
+            border-bottom: 1px solid #999;
+        }
+
+        .panel .content {
+            border-bottom: 1px solid #999;
+        }
+    </style>
 </head>
 <body>
 
 <div id="app">
-
+    <div class="panel">
+        <div class="title">slot插槽</div>
+        <div class="content">
+            Cleopatra Selene (died 69 BC) was a queen of Seleucid Syria (83–69 BC). The daughter of Ptolemy VIII and Cleopatra III of Egypt, she became the queen of Egypt in 115 BC when she was married to her brother, King Ptolemy IX, and later probably married King Ptolemy X. In 103 BC, Cleopatra III establishe
+        </div>
+        <div class="footer">
+            More information...
+        </div>
+    </div>
 </div>
+<template id="panel-tpl">
+
+</template>
 <script src="../lib/vue.js"></script>
 <script src="js/main.js"></script>
 </body>
