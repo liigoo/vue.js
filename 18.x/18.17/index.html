@@ -8,7 +8,7 @@
             max-width: 300px;
             border: 1px solid #999;
             /*padding: 20px;*/
-            margin: 10px;
+            margin-bottom: 15px;
             line-height: 28px;
         }
 
@@ -29,19 +29,32 @@
 <body>
 
 <div id="app">
-    <panel></panel>
-    <panel></panel>
-    <panel></panel>
+    <panel>
+        <div slot="title">slot插槽</div>
+        <div slot="content">
+            leucid Syria (83–69 BC). The daughter of Ptolemy VIII and Cleopatra III of Egypt, she became the queen of Egypt in 115 BC when she was married to her bro
+        </div>
+        <div slot="footer">More information</div>
+    </panel>
+
+    <panel>此处会展示默认信息</panel>
 </div>
 
+<!--template：模板里面也可以添加默认信息-->
 <template id="panel-tpl">
     <div class="panel">
-        <div class="title">slot插槽</div>
+        <div class="title">
+            <slot name="title">
+                default title
+                <!--默认信息可以添加，功能等同于placeholder
+                ，例如<slot name="title">默认信息</slot>-->
+            </slot>
+        </div>
         <div class="content">
-            Cleopatra Selene (died 69 BC) was a queen of Seleucid Syria (83–69 BC). The daughter of Ptolemy VIII and Cleopatra III of Egypt, she became the queen of Egypt in 115 BC when she was married to her brother, King Ptolemy IX, and later probably married King Ptolemy X. In 103 BC, Cleopatra III establishe
+            <slot name="content">default content</slot>
         </div>
         <div class="footer">
-            More information...
+            <slot name="footer">default footer</slot>
         </div>
     </div>
 </template>
