@@ -23,11 +23,18 @@
         .panel .content {
             border-bottom: 1px solid #999;
         }
+
     </style>
 </head>
 <body>
 
 <div id="app">
+    <panel></panel>
+    <panel></panel>
+    <panel></panel>
+</div>
+
+<template id="panel-tpl">
     <div class="panel">
         <div class="title">slot插槽</div>
         <div class="content">
@@ -37,10 +44,8 @@
             More information...
         </div>
     </div>
-</div>
-<template id="panel-tpl">
-
 </template>
+
 <script src="../lib/vue.js"></script>
 <script src="js/main.js"></script>
 </body>
