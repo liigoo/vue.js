@@ -1,4 +1,6 @@
-//
+//导航钩子
+//关键词：beforeEach：路由的生命周期
+
 var routes = [
     {
         path: '/',
