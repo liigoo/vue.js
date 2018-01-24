@@ -7,9 +7,17 @@
 <body>
 
 <div id="app">
-    
+    <div>
+        <router-link to="/">首页</router-link>
+        <router-link to="/login">登录</router-link>
+        <router-link to="/manger">管理</router-link>
+    </div>
+    <div>
+        <router-view></router-view>
+    </div>
 </div>
 <script src="../lib/vue.js"></script>
+<script src="../lib/vue-router.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
