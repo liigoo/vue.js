@@ -1,5 +1,7 @@
 //路由
-//关键词：beforeEach：路由的生命周期
+//关键词：to.matched.some,匹配路由字段
+//用meta实现更方便的页面权限控制
+//例： meta: {login_required: true}
 
 var routes = [
     {
@@ -22,6 +24,9 @@ var routes = [
     },
     {
         path: '/manger',
+        meta: {
+          login_required: true
+        },
         component: {
             template: `
             <div>
@@ -47,14 +52,12 @@ var router = new VueRouter({
     routes: routes,
 });
 
-/*beforeEach: 类似于路由的生命周期，在路由开始以后
-* 进行下一步动作，路由结束，动作结束
-* 与之对应的有afterEach(路由结束以后的动作，用的较少)*/
+/*对子路由实现访问权限控制*/
 router.beforeEach(function (to, from, next) {
     var logged_in = false;
     console.log('to.matched: ',to.matched);
     if(!logged_in && to.matched.some(function (item) {
-            return item.path == '/manger';
+            return item.meta.login_required;
         }))
         next('/login');
     else
