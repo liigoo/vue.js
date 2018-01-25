@@ -39,8 +39,8 @@ var router = new VueRouter({
 * 进行下一步动作，路由结束，动作结束
 * 与之对应的有afterEach(路由结束以后的动作，用的较少)*/
 router.beforeEach(function (to, from, next) {
-   var logged_in = false;
-   if(logged_in && to.path === '/post')
+   var logged_in = true;
+   if(logged_in && to.path === '/manger')
        next('/login');
    else
        next();
